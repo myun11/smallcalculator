@@ -44,6 +44,7 @@
 .Calculator {
   display: grid;
   height: 200px;
+  font-size: larger;
   
   grid-template-columns: 200px 200px 200px 200px;
   grid-template-rows: auto;
@@ -55,4 +56,5 @@
   background-color: white;
   color: black;
   text-align: left;
+  font-size: 2rem;
 }

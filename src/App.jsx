@@ -35,9 +35,18 @@ function App() {
           
           <button onClick = {() => { setScreen(str => str + '(')}}>(</button>
           <button onClick = {() => { setScreen(str => str + ')')}}>)</button>
-          <button onClick = {() => ( setScreen(str => str.slice(0, str.length - 1)))}>&#x2190;</button>
-          
           <button onClick = {() => {
+            try {
+              let newVal = screen.toString()
+              newVal = newVal.slice(0, newVal.length - 1)
+              setScreen(newVal)
+            } catch (error) {
+              console.log(error)
+            }
+          
+          }}>&#x2190;</button>
+          
+          <button style={{backgroundColor : 'green'}} onClick = {() => {
             try {
               let newVal = eval(screen.replace('x', '*').replace('(', '*('))
               setScreen(() => newVal)
