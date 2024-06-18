@@ -42,13 +42,17 @@
 }
 
 .Calculator {
-  grid-template-areas:
-    "main main main main"
-    "main main main main"
-    "main main main main";
-
   display: grid;
-  height: 100px;
-  grid-template-columns: 100px 100px 100px 100px;
+  height: 200px;
+  
+  grid-template-columns: 200px 200px 200px 200px;
   grid-template-rows: auto;
+}
+
+.Screen {
+  width: 800px;
+  height: 200px;
+  background-color: white;
+  color: black;
+  text-align: left;
 }
